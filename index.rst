@@ -10,6 +10,8 @@ Welcome to vb_index's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+.. contents::
+
 VBIndex
 
 Vogt-Bailey index toolbox in Python

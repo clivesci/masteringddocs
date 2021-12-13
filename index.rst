@@ -104,6 +104,7 @@ Searchlight analyses
 The per vertex VB-index analyses can be carried with the following command
 
 ``vb_tool --surface input_data/surface.surf.gii  --data input_data/data.func.gii --mask input_data/cortical_mask.shape.gii --output search_light``
+
 The number of vertices in the surface mesh must match the number of entries in the data and in the mask.
 
 The cortical mask must contain a logical array, with True values in the region on which the analyses will be carried out, and False in the regions to be left out. This is most commonly used to mask out midbrain structures which would otherwise influence the analysis of the cortical regions.
@@ -113,6 +114,7 @@ Whole brain analyses
 To perform full brain feature gradient analyses and the associated VB-index, the flag -fb or --full-brain must be set. Otherwise, the flags are the same as in the searchlight analysis.
 
 ``vb_tool --surface input_data/surface.surf.gii  --data input_data/data.func.gii --mask input_data/cortical_mask.shape.gii --full-brain --output full_brain_gradient``
+
 Be warned, however, that this analysis can take long, use a large amount of RAM. In systems with 32k vertices, upwards of 30GB of RAM were used.
 
 Regions of Interest analyses
@@ -120,6 +122,7 @@ Regions of Interest analyses
 Sometimes, one is interested only in a small set of ROIs. In this case, the feature gradient maps and the associated VB-index value for each ROI will be extracted. The way of calling the program is as follows:
 
 ``vb_tool --surface input_data/surface.surf.gii  --data input_data/data.func.gii  -c input_data/clusters.shape.gii --output clustered_analyses``
+
 The cluster file works similarly to the cortical mask in the previous modalities. However, its structure is slightly different. Instead of an array of logical values, the file must contain an array of integers, where each integer corresponds to a different cluster. The 0th cluster is special, and denotes an area which will not be analyzed. In these regards, it has a similar use to the cortical mask.
 
 **Usage of vb_tool GUI**

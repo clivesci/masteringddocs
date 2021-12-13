@@ -43,7 +43,7 @@ In your terminal, if you see the following output, the program has been properly
 ``usage: vb_tool [-h] [-j N] [-n norm] [-fb] [-m file] [-c file] -s file -d file -o file``
 
 Calculate the Vogt-Bailey index of a dataset. For more information, check
-`<https://github.com/VBIndex/py_vb_toolbox>`_.
+https://github.com/VBIndex/py_vb_toolbox.
 
 optional arguments:
   -h, --help            show this help message and exit

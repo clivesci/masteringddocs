@@ -2,12 +2,11 @@
    sphinx-quickstart on Wed Dec  8 16:15:51 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
-.. contents::
 
 Welcome to vb_index's documentation!
 ====================================
 
-.. toctree::
+.. contents::
    :maxdepth: 2
    :caption: Contents:
 

@@ -5,16 +5,14 @@
 
 
 .. contents:: 
+*******************************************************
 .. centered:: **Welcome to VB Index's documentation!**
+*******************************************************
 ====================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-   
-***********
-**VBIndex**
-***********
 
 **Vogt-Bailey index toolbox in Python**
 #######################################

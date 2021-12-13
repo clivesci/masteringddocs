@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 .. contents::
-Welcome to vb_index's documentation!
+**Welcome to VB Index's documentation!**
 ====================================
 
 .. toctree::

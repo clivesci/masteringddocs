@@ -46,34 +46,34 @@ Calculate the Vogt-Bailey index of a dataset. For more information, check
 https://github.com/VBIndex/py_vb_toolbox.
 
 optional arguments:
-  -h, --help            show this help message and exit
-  -j N, --jobs N        Maximum number of jobs to be used. If abscent, one job
+  ``-h, --help``            show this help message and exit
+  ``-j N, --jobs N``        Maximum number of jobs to be used. If abscent, one job
                         per CPU will be spawned
-  -n norm, --norm norm  Laplacian normalization to be used. Possibilities are
+  ``-n norm, --norm norm``  Laplacian normalization to be used. Possibilities are
                         "geig", "unnorm", "rw" and "sym". Defaults to geig.
-  -fb, --full-brain     Calculate full brain feature gradient analyses.
-  -m file, --mask file  File containing the labels to identify the cortex,
+  ``-fb, --full-brain``     Calculate full brain feature gradient analyses.
+  ``-m file, --mask file``  File containing the labels to identify the cortex,
                         rather than the medial brain structures. This flag
                         must be set for normal analyses and full brain
                         analyses.
-  -c file, --clusters file
+  ``-c file, --clusters`` file
                         File containing the surface clusters. Cluster with
                         index 0 are expected to denote the medial brain
                         structures and will be ignored.
 
 required named arguments:
-  -s file, --surface file
+  ``-s file, --surface`` file
                         File containing the surface mesh
-  -d file, --data file  File containing the data over the surface
-  -o file, --output file
+  ``-d file, --data file``  File containing the data over the surface
+  ``-o file, --output file``
                         Base name for the output files
 
-authors:
+**Authors:**
 
-Lucas da Costa Campos (lqccampos (at) gmail.com) and Claude J Bajada
-(claude.bajada (at) um.edu.mt).
+Lucas da Costa Campos (*lqccampos (at) gmail.com*) and Claude J Bajada
+(*claude.bajada (at) um.edu.mt*).
 
-copyright:
+**copyright:**
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
@@ -88,7 +88,7 @@ You should have received a copy of the GNU General Public License along with
 this program. If not, see <https://www.gnu.org/licenses>.
 If you copied the program source code, the executable is found in vb_toolbox/app.py. You can test the program using
 
-python3 vb_toolbox/app.py
+``python3 vb_toolbox/app.py``
 which should yield the results shown above.
 
 There are three main uses for the vb_tool
@@ -100,7 +100,7 @@ Searchlight analyses
 
 The per vertex VB-index analyses can be carried with the following command
 
-vb_tool --surface input_data/surface.surf.gii  --data input_data/data.func.gii --mask input_data/cortical_mask.shape.gii --output search_light
+``vb_tool --surface input_data/surface.surf.gii  --data input_data/data.func.gii --mask input_data/cortical_mask.shape.gii --output search_light``
 The number of vertices in the surface mesh must match the number of entries in the data and in the mask.
 
 The cortical mask must contain a logical array, with True values in the region on which the analyses will be carried out, and False in the regions to be left out. This is most commonly used to mask out midbrain structures which would otherwise influence the analysis of the cortical regions.
@@ -109,41 +109,42 @@ Whole brain analyses
 
 To perform full brain feature gradient analyses and the associated VB-index, the flag -fb or --full-brain must be set. Otherwise, the flags are the same as in the searchlight analysis.
 
-vb_tool --surface input_data/surface.surf.gii  --data input_data/data.func.gii --mask input_data/cortical_mask.shape.gii --full-brain --output full_brain_gradient
+``vb_tool --surface input_data/surface.surf.gii  --data input_data/data.func.gii --mask input_data/cortical_mask.shape.gii --full-brain --output full_brain_gradient``
 Be warned, however, that this analysis can take long, use a large amount of RAM. In systems with 32k vertices, upwards of 30GB of RAM were used.
 
 Regions of Interest analyses
 
 Sometimes, one is interested only in a small set of ROIs. In this case, the feature gradient maps and the associated VB-index value for each ROI will be extracted. The way of calling the program is as follows:
 
-vb_tool --surface input_data/surface.surf.gii  --data input_data/data.func.gii  -c input_data/clusters.shape.gii --output clustered_analyses
+``vb_tool --surface input_data/surface.surf.gii  --data input_data/data.func.gii  -c input_data/clusters.shape.gii --output clustered_analyses``
 The cluster file works similarly to the cortical mask in the previous modalities. However, its structure is slightly different. Instead of an array of logical values, the file must contain an array of integers, where each integer corresponds to a different cluster. The 0th cluster is special, and denotes an area which will not be analyzed. In these regards, it has a similar use to the cortical mask.
 
-Usage of vb_tool GUI
+**Usage of vb_tool GUI**
 
 The VB toolbox can be run through a graphical interface. To do this, simply call If you have installed the software through pip, then all that needs to be done is to run the following command:
 
-vb_gui
-General Notes
+``vb_gui``
 
-Note on the data file
+**General Notes**
 
-vb_tool can handle two separate cases. If there is a single structure in the file, vb_tool will read it as a matrix on which each row relates to each vertex. If there are two or more structures, it will read them as a series of column vectors, on which each entry relates to a vertex. It will then coalesce them into a single matrix, and run the analyses of all quantities concurrently.
+**Note on the data file**
 
-Notes on parallelism
+``vb_tool`` can handle two separate cases. If there is a single structure in the file, ``vb_tool`` will read it as a matrix on which each row relates to each vertex. If there are two or more structures, it will read them as a series of column vectors, on which each entry relates to a vertex. It will then coalesce them into a single matrix, and run the analyses of all quantities concurrently.
 
-vb_tool uses a high level of parallelism. How many threads are spawned by vb_tool itself can be controlled using the -j/--jobs flag. By default, it will try to use all the CPUs in your computer at the same time to perform the analyzes. Depending on the BLAS installation in your computer, this might not be the best fastest approach, but rarely will be the slowest. If you are unsure, leave the number of jobs at the default level.
+**Notes on parallelism**
 
-Due to job structure of the vb_tool, the level of parallelism it can achieve on its own depends on the specific analyses being carried out.
+``vb_tool`` uses a high level of parallelism. How many threads are spawned by vb_tool itself can be controlled using the ``-j/--jobs`` flag. By default, it will try to use all the CPUs in your computer at the same time to perform the analyzes. Depending on the BLAS installation in your computer, this might not be the best fastest approach, but rarely will be the slowest. If you are unsure, leave the number of jobs at the default level.
 
-Searchlight analyses: High level of parallelism. Will spawn as many jobs are there are CPUs
-Whole brain analyses: Low lever of parallelism. Will only spawn one job
-Region of Interest analyses: Medium level of parallelism. Will spawn as many jobs as there are ROIs, or number of CPUS, whichever is the lowest.
+Due to job structure of the ``vb_tool``, the level of parallelism it can achieve on its own depends on the specific analyses being carried out.
+
+**Searchlight analyses**: High level of parallelism. Will spawn as many jobs are there are CPUs
+**Whole brain analyses**: Low lever of parallelism. Will only spawn one job
+**Region of Interest analyses**: Medium level of parallelism. Will spawn as many jobs as there are ROIs, or number of CPUS, whichever is the lowest.
 Specially in the whole brain analyses, having a well optimized BLAS installation will grandly accelerate the process, and allow for a further paralelism. Both MKL and OpenBLAS have been shown to offer fast analyses. If you are using the Anaconda distribution, you will have a good BLAS pre-configured.
 
-Developer Information
+**Developer Information**
 
-Build
+**Build**
 
 The following information is only useful for individuals who are actively contributing to the program.
 

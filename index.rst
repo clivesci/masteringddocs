@@ -6,7 +6,7 @@
 Welcome to vb_index's documentation!
 ====================================
 
-.. contents::
+.. toctree::
    :maxdepth: 2
    :caption: Contents:
 

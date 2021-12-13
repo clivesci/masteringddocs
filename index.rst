@@ -11,16 +11,11 @@
    :maxdepth: 2
    :caption: Contents:
    
-   Welcome to VB Index's Documentation!
-   VBIndex
-   Vogt_baily index toolbox in Python
-   Installation
-
 ***********
 **VBIndex**
 ***********
 
-**Vogt-Bailey index toolbox in Python**
+.. centered:: **Vogt-Bailey index toolbox in Python**
 #######################################
 
 **Installation**

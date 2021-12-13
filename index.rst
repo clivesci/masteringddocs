@@ -4,9 +4,9 @@
    contain the root `toctree` directive.
 
 
-.. contents:: 
-.. centered:: **Welcome to VB Index's documentation!**
 
+.. centered:: **Welcome to VB Index's documentation!**
+.. contents:: 
 ====================================
 
 .. toctree::

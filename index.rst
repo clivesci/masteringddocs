@@ -11,13 +11,15 @@ Welcome to vb_index's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+***********
 **VBIndex**
+***********
 
 **Vogt-Bailey index toolbox in Python**
+#######################################
 
 **Installation**
-
+****************
 It is possible to simply copy the folder vb_toobox to your project folder and proceed from there. If this is the case, be sure you have the following packages installed
 
 multiprocess
@@ -33,6 +35,7 @@ The preferred way to install is through pip. It is as easy as
 If your pip is properly configured, you can now use the program vb_tool from your command line, and import any of the submodules in the vb_toolbox in your python interpreter.
 
 **Usage of vb_tool CLI**
+************************
 
 If VBIndex was installed via pip, the command line program vb_tool should be available in your terminal. You can test if the program is correctly installed by typing
 
@@ -46,7 +49,7 @@ Calculate the Vogt-Bailey index of a dataset. For more information, check
 https://github.com/VBIndex/py_vb_toolbox.
 
 optional arguments:
-  ``-h, --help``            show this help message and exit
+  ``-h, --help``            show this help message and exit 
   ``-j N, --jobs N``        Maximum number of jobs to be used. If abscent, one job per CPU will be spawned
   ``-n norm, --norm norm``  Laplacian normalization to be used. Possibilities are "geig", "unnorm", "rw" and "sym". Defaults to geig.
   ``-fb, --full-brain``     Calculate full brain feature gradient analyses.
@@ -59,12 +62,12 @@ required named arguments:
   ``-o file, --output file`` Base name for the output files
 
 **Authors:**
-
+**************
 Lucas da Costa Campos (*lqccampos (at) gmail.com*) and Claude J Bajada
 (*claude.bajada (at) um.edu.mt*).
 
 **copyright:**
-
+**************
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
 Foundation, either version 3 of the License, or (at your option) any later
@@ -133,7 +136,7 @@ Due to job structure of the ``vb_tool``, the level of parallelism it can achieve
 Specially in the whole brain analyses, having a well optimized BLAS installation will grandly accelerate the process, and allow for a further paralelism. Both MKL and OpenBLAS have been shown to offer fast analyses. If you are using the Anaconda distribution, you will have a good BLAS pre-configured.
 
 **Developer Information**
-
+*************************
 **Build**
 
 The following information is only useful for individuals who are actively contributing to the program.

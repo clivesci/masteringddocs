@@ -47,26 +47,16 @@ https://github.com/VBIndex/py_vb_toolbox.
 
 optional arguments:
   ``-h, --help``            show this help message and exit
-  ``-j N, --jobs N``        Maximum number of jobs to be used. If abscent, one job
-                        per CPU will be spawned
-  ``-n norm, --norm norm``  Laplacian normalization to be used. Possibilities are
-                        "geig", "unnorm", "rw" and "sym". Defaults to geig.
+  ``-j N, --jobs N``        Maximum number of jobs to be used. If abscent, one job per CPU will be spawned
+  ``-n norm, --norm norm``  Laplacian normalization to be used. Possibilities are "geig", "unnorm", "rw" and "sym". Defaults to geig.
   ``-fb, --full-brain``     Calculate full brain feature gradient analyses.
-  ``-m file, --mask file``  File containing the labels to identify the cortex,
-                        rather than the medial brain structures. This flag
-                        must be set for normal analyses and full brain
-                        analyses.
-  ``-c file, --clusters`` file
-                        File containing the surface clusters. Cluster with
-                        index 0 are expected to denote the medial brain
-                        structures and will be ignored.
+  ``-m file, --mask file``  File containing the labels to identify the cortex, rather than the medial brain structures. This flag must be set for normal analyses and full brain analyses.
+  ``-c file, --clusters file`` File containing the surface clusters. Cluster with index 0 are expected to denote the medial brain structures and will be ignored.
 
 required named arguments:
-  ``-s file, --surface`` file
-                        File containing the surface mesh
+  ``-s file, --surface file`` File containing the surface mesh
   ``-d file, --data file``  File containing the data over the surface
-  ``-o file, --output file``
-                        Base name for the output files
+  ``-o file, --output file`` Base name for the output files
 
 **Authors:**
 

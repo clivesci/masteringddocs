@@ -2,6 +2,7 @@
    sphinx-quickstart on Wed Dec  8 16:15:51 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
+.. contents::
 
 Welcome to vb_index's documentation!
 ====================================
@@ -10,13 +11,12 @@ Welcome to vb_index's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-.. contents::
 
-VBIndex
+**VBIndex**
 
-Vogt-Bailey index toolbox in Python
+**Vogt-Bailey index toolbox in Python**
 
-Installation
+**Installation**
 
 It is possible to simply copy the folder vb_toobox to your project folder and proceed from there. If this is the case, be sure you have the following packages installed
 
@@ -28,21 +28,23 @@ pillow
 psutil
 The preferred way to install is through pip. It is as easy as
 
-pip install vb_toolbox
+``pip install vb_toolbox``
+
 If your pip is properly configured, you can now use the program vb_tool from your command line, and import any of the submodules in the vb_toolbox in your python interpreter.
 
-Usage of vb_tool CLI
+**Usage of vb_tool CLI**
 
 If VBIndex was installed via pip, the command line program vb_tool should be available in your terminal. You can test if the program is correctly installed by typing
 
-vb_tool -h
+``vb_tool -h``
+
 In your terminal, if you see the following output, the program has been properly installed.
 
-usage: vb_tool [-h] [-j N] [-n norm] [-fb] [-m file] [-c file] -s file -d file
-              -o file
+``usage: vb_tool [-h] [-j N] [-n norm] [-fb] [-m file] [-c file] -s file -d file
+              -o file``
 
 Calculate the Vogt-Bailey index of a dataset. For more information, check
-https://github.com/VBIndex/py_vb_toolbox.
+`<https://github.com/VBIndex/py_vb_toolbox>`_.
 
 optional arguments:
   -h, --help            show this help message and exit

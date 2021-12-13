@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. contents::
-**Welcome to VB Index's documentation!**
+
+.. contents:: **Welcome to VB Index's documentation!**
 ====================================
 
 .. toctree::
@@ -15,7 +15,7 @@
 **VBIndex**
 ***********
 
-.. centered:: **Vogt-Bailey index toolbox in Python**
+**Vogt-Bailey index toolbox in Python**
 #######################################
 
 **Installation**

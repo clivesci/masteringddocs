@@ -48,7 +48,7 @@ In your terminal, if you see the following output, the program has been properly
 Calculate the Vogt-Bailey index of a dataset. For more information, check
 https://github.com/VBIndex/py_vb_toolbox.
 
-optional arguments:
+**Optional Arguments:**
   -h, --help            show this help message and exit
   -j N, --jobs N        Maximum number of jobs to be used. If abscent, one job
                         per CPU will be spawned
@@ -64,7 +64,7 @@ optional arguments:
                         index 0 are expected to denote the medial brain
                         structures and will be ignored.
 
-required named arguments:
+**Required Named Arguments:**
   -s file, --surface file
                         File containing the surface mesh
   -d file, --data file  File containing the data over the surface

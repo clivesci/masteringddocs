@@ -40,8 +40,8 @@ If VBIndex was installed via pip, the command line program vb_tool should be ava
 
 In your terminal, if you see the following output, the program has been properly installed.
 
-usage: vb_tool [-h] [-j N] [-n norm] [-fb] [-m file] [-c file] -s file -d file
-              -o file
+``usage: vb_tool [-h] [-j N] [-n norm] [-fb] [-m file] [-c file] -s file -d file
+              -o file``
 
 Calculate the Vogt-Bailey index of a dataset. For more information, check
 `<https://github.com/VBIndex/py_vb_toolbox>`_.

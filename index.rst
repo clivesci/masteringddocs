@@ -10,6 +10,11 @@
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   
+   Welcome to VB Index's Documentation!
+   VBIndex
+   Vogt_baily index toolbox in Python
+   Installation
 
 ***********
 **VBIndex**

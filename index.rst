@@ -164,9 +164,4 @@ python3 setup.py sdist bdist_wheel
 Upload the package to pip
 python3 -m twine upload dist/*
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

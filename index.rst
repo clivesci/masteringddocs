@@ -96,10 +96,11 @@ which should yield the results shown above.
 
 There are three main uses for the vb_tool
 
-Searchlight analyses
-Whole brain feature gradient analyses
-Feature gradient analyses in a specified set of regions of interest
-Searchlight analyses
+1. Searchlight analyses
+2. Whole brain feature gradient analyses
+3. Feature gradient analyses in a specified set of regions of interest
+
+**Searchlight analyses**
 
 The per vertex VB-index analyses can be carried with the following command
 
@@ -109,7 +110,7 @@ The number of vertices in the surface mesh must match the number of entries in t
 
 The cortical mask must contain a logical array, with True values in the region on which the analyses will be carried out, and False in the regions to be left out. This is most commonly used to mask out midbrain structures which would otherwise influence the analysis of the cortical regions.
 
-Whole brain analyses
+**Whole brain analyses**
 
 To perform full brain feature gradient analyses and the associated VB-index, the flag -fb or --full-brain must be set. Otherwise, the flags are the same as in the searchlight analysis.
 
@@ -117,7 +118,7 @@ To perform full brain feature gradient analyses and the associated VB-index, the
 
 Be warned, however, that this analysis can take long, use a large amount of RAM. In systems with 32k vertices, upwards of 30GB of RAM were used.
 
-Regions of Interest analyses
+**Regions of Interest analyses**
 
 Sometimes, one is interested only in a small set of ROIs. In this case, the feature gradient maps and the associated VB-index value for each ROI will be extracted. The way of calling the program is as follows:
 

@@ -22,12 +22,13 @@
 ****************
 It is possible to simply copy the folder vb_toobox to your project folder and proceed from there. If this is the case, be sure you have the following packages installed
 
-multiprocess
-nibabel
-numpy
-scipy
-pillow
-psutil
+1. multiprocess
+2. nibabel
+3. numpy
+4. scipy
+5. pillow
+6. psutil
+
 The preferred way to install is through pip. It is as easy as
 
 ``pip install vb_toolbox``

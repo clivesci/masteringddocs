@@ -20,7 +20,7 @@
 
 **Installation**
 ****************
-It is possible to simply copy the folder vb_toobox to your project folder and proceed from there. If this is the case, be sure you have the following packages installed
+It is possible to simply copy the folder vb_toobox to your project folder and proceed from there. If this is the case, be sure you have the following packages installed:
 
 1. multiprocess
 2. nibabel

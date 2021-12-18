@@ -51,7 +51,7 @@ https://github.com/VBIndex/py_vb_toolbox.
 
 **Optional Arguments:**
   -h, --help            show this help message and exit
-  -j N, --jobs N        Maximum number of jobs to be used. If abscent, one job
+  -j N, --jobs N        Maximum number of jobs to be used. If absent, one job
                         per CPU will be spawned
   -n norm, --norm norm  Laplacian normalization to be used. Possibilities are
                         "geig", "unnorm", "rw" and "sym". Defaults to geig.
